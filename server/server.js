@@ -18,7 +18,7 @@ app.get('/api/routes', async(req, res) => {
         const routes = await pool.query(
             "SELECT * FROM routes ORDER BY id"
         );
-        res.json(routes.rows);
+        res.json(routes.rows).send;
     } catch (err) {
         console.error(err.message);
     }

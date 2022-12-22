@@ -45,7 +45,7 @@ export default {
   methods: {
     fetchRouts() {
       fetch(`http://localhost:3000/api/routes/`)
-        .then((response) => response.json())
+        .then((response) => (response.json()))
         .then((data) => (this.routes = data))
         .catch((err) => console.log(err.message));
    },
